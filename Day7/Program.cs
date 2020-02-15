@@ -6,8 +6,9 @@ namespace Day7
     {
         static void Main(string[] args)
         {
-            uzd3();
-            
+            uzd6();
+
+
         }
         static void uzd1()
         {
@@ -50,7 +51,7 @@ namespace Day7
         }
         static void objEx1()
         {
-            objpiem obj = new objpiem();
+            objpiem obj = new objpiem(0,0);
             obj.setA(1);
             obj.setB(2);
             obj.print();
@@ -59,8 +60,11 @@ namespace Day7
             obj.setB(4);
             obj.print();
 
-            objpiem obj2 = new objpiem();
+            objpiem obj2 = new objpiem(0,0);
             obj2.print();
+
+            objpiem obj3 = new objpiem(9,9);
+            obj3.print();
 
         }
         static void uzd3()
@@ -90,5 +94,64 @@ namespace Day7
             obj3.setC(10);
             Console.WriteLine(obj3.perimetrs());
         }
+
+
+        static void uzd4()
+        {
+            trijsturisObj[] masivs = new trijsturisObj[5];  
+            
+            for (int i=0; i<5; i++)
+            {
+                Console.Clear();
+                masivs[i] = new trijsturisObj();
+                int skaitlis = ievade();
+                masivs[i].setA(skaitlis);
+                skaitlis = ievade();
+                masivs[i].setB(skaitlis);
+                skaitlis = ievade();
+                masivs[i].setC(skaitlis);
+                Console.WriteLine(masivs[i].perimetrs());
+                Console.ReadLine();
+            }
+            Console.Clear();
+            for (int i=0; i<5; i++)
+            {
+                Console.WriteLine(masivs[i].perimetrs());
+            }          
+
+        }
+        static void uzd5()
+        {
+            //parveidot, uzd3 ar konstruktoru
+            trijsturisObj1 obj1 = new trijsturisObj1(1,2,3);            
+            Console.WriteLine(obj1.perimetrs());
+
+            trijsturisObj1 obj2 = new trijsturisObj1(0,0,6);            
+            Console.WriteLine(obj2.perimetrs());
+
+            trijsturisObj1 obj3 = new trijsturisObj1(9,1,1);            
+            Console.WriteLine(obj3.perimetrs());
+        }
+        static void uzd6()
+        {
+            //klase ar nosaukumu students
+            //klase konstruktors ar parametriem
+            //vārds, Uzvārds, Kurss, iestāšanās gads
+            //print() izvada visu informāciju
+            // kurss 1-3
+            //ja ir vairāk par 3, iestata 3
+            //ja ir mazāk par 1, iestata 1
+            //uztaisa 2 testa objektus
+                                             
+
+            students obj1 = new students("Janis","Berzins",3,2000);
+            obj1.print();            
+
+            students obj2 = new students("Juris", "Skuja", 4, 2009);
+            obj2.print();
+
+        }
+                
+
     }
 }

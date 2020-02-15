@@ -6,12 +6,13 @@ namespace Day7
 {
     class objpiem
     {
-        private int a = 0;
-        private int b = 0;
+        private int a;
+        private int b;
 
-        public objpiem()
+        public objpiem(int localA, int b)
         {
-
+            a = localA; //1. veids
+            this.b = b; //2. veids
         }
 
         public void setA(int localA)
