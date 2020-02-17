@@ -14,8 +14,7 @@ namespace Day7
         public students(string vards, string uzvards, int kurss, int gads)
         {
             this.vards = vards;
-            this.uzvards = uzvards;
-            this.kurss = kurss;
+            this.uzvards = uzvards;            
             this.gads = gads;
 
             if (kurss>3)
@@ -25,11 +24,19 @@ namespace Day7
             else if (kurss<1)
             {
                 this.kurss = 1;
-            }            
+            }
+            else
+            {
+                this.kurss = kurss;
+            }
         }
         public void print ()
         {
-            Console.WriteLine(vards + " "+uzvards + " "+kurss +" "+ gads);
+            Console.WriteLine("Studenta vards "+vards);
+            Console.WriteLine("Studenta uzvards "  + uzvards);
+            Console.WriteLine("Kurss, kura macas " + kurss);
+            Console.WriteLine("Iestasanas gads " + gads);
+            Console.WriteLine();
         }
 
     }

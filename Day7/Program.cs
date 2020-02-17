@@ -141,17 +141,25 @@ namespace Day7
             // kurss 1-3
             //ja ir vairāk par 3, iestata 3
             //ja ir mazāk par 1, iestata 1
-            //uztaisa 2 testa objektus
-                                             
+            //uztaisa 2 testa objektus                                             
 
-            students obj1 = new students("Janis","Berzins",3,2000);
+            students obj1 = new students("Janis","Berzins",0,2000);
             obj1.print();            
 
             students obj2 = new students("Juris", "Skuja", 4, 2009);
             obj2.print();
-
         }
                 
+        static void uzd7()
+        {
+            //uztaisīt statisku klasi
+            //kura atgriež double tipa skaitli pēc cilvēka ievades
 
+            //uztaisīt klasi, kur ir metodes saskaitīt, atņemt, reizināt, dalīt
+            //skaitļus iedodam klasē kā parametrus katrai metodei atsevišķi
+            
+
+            //no main cilvēks ievada skaitli 1 un skaitli 2, izvēlas darbību un izvada rezultātu
+        }
     }
 }
