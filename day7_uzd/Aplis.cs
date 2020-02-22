@@ -6,18 +6,24 @@ namespace day7_uzd
 {
     class Aplis
     {
-        private static double radiuss;
+        private double radiuss;
 
-        public static double input()
+        public Aplis ()
         {
             Console.WriteLine("ievadiet radiusu");
-            radiuss = Convert.ToDouble(Console.ReadLine());
-            return radiuss;
+            this.radiuss = Convert.ToDouble(Console.ReadLine());
         }
-        
-        public static void print()
+        private double laukums()
         {
-            Console.WriteLine("Laukums ir " + (radiuss*radiuss*3.14) + " radiuss ir " + radiuss);
+            return radiuss * radiuss * Math.PI;
+        }
+        public void getLaukums()
+        {
+            Console.WriteLine("Laukums ir " + laukums());
+        }
+        public void print()
+        {            
+            Console.WriteLine("Laukums ir " + laukums() + " radiuss ir " + radiuss);
         }
 
     }

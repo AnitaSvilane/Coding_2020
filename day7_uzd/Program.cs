@@ -6,13 +6,14 @@ namespace day7_uzd
     {
         static void Main(string[] args)
         {
+            //uzd1();
             uzd2();            
         }
         static void uzd2()
         {
-            Aplis.input();
-            Aplis.print();
-
+            Aplis obj = new Aplis();
+            obj.getLaukums();
+            obj.print();
         }
         static void uzd1()
         {
