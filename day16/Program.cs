@@ -6,7 +6,7 @@ namespace Day14_IO_Sample
     {
         static void Main(string[] args)
         {
-            uzd.uzd1();
+            uzd2.uzd1();
         }
     }
 }

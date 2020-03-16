@@ -16,27 +16,35 @@ namespace Day14_IO_Sample
         public static void uzd1()
         {
             List<int> saraksts = new List<int>();
-            string choice = "";
 
-            while (choice != "0")
+            try
             {
-                PrintMenu();
-                choice = Console.ReadLine();
-
-                switch (choice)
+                string choice = "";
+                while (choice != "0")
                 {
-                    case "1":
-                        Print(saraksts);
-                        break;
-                    case "2":
-                        Add(saraksts);
-                        break;
-                    case "3":
-                        Summ(saraksts);
-                        break;
+                    PrintMenu();
+                    choice = Console.ReadLine();
+                    switch (choice)
+                    {
+                        case "1":
+                            Print(saraksts);
+                            break;
+                        case "2":
+                            Add(saraksts);
+                            break;
+                        case "3":
+                            Summ(saraksts);
+                            break;
+                        default:
+                            Console.WriteLine("Ievadiet 1, 2, 3 vai 0");
+                            break;
+                    }
                 }
             }
-
+                catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }     
 
             static void PrintMenu()
             {
